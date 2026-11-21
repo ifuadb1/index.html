@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commodity Tracking & AI BI Snapshot Report</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0f172a; color: #f1f5f9; margin: 0; padding: 24px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    h1 { margin: 0 0 6px; font-size: 22px; }
+    .sub { color: #94a3b8; font-size: 13px; margin-bottom: 20px; }
+    .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 24px; }
+    .kpi { background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 14px; }
+    .kpi-label { font-size: 12px; color: #94a3b8; }
+    .kpi-val { font-size: 20px; font-weight: 700; margin-top: 4px; color: #38bdf8; }
+    table { width: 100%; border-collapse: collapse; background: #1e293b; border-radius: 12px; overflow: hidden; font-size: 13px; }
+    th, td { text-align: left; padding: 12px; border-bottom: 1px solid #334155; vertical-align: top; }
+    th { background: #0f172a; color: #94a3b8; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .muted { color: #94a3b8; font-size: 12px; }
+    .pill { display: inline-block; background: #0f172a; color: #7dd3fc; border: 1px solid #334155; padding: 2px 8px; border-radius: 6px; font-size: 11px; font-weight: 600; margin-bottom: 4px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Commodity Tracking &amp; AI BI Report</h1>
+    <div class="sub">Exported on 2026-11-21 19:10:09 UTC · Total Lots: 4</div>
+    <div class="kpis">
+      <div class="kpi"><div class="kpi-label">Total Ordered Qty</div><div class="kpi-val">14,000</div></div>
+      <div class="kpi"><div class="kpi-label">Pending PO Balance</div><div class="kpi-val">6,000</div></div>
+      <div class="kpi"><div class="kpi-label">Received Qty</div><div class="kpi-val">7,905</div></div>
+      <div class="kpi"><div class="kpi-label">Active Flags &amp; Alerts</div><div class="kpi-val">9</div></div>
+      <div class="kpi"><div class="kpi-label">Avg AI Risk Score</div><div class="kpi-val">39 / 100</div></div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>PO / ASN</th>
+          <th>Commodity &amp; Item</th>
+          <th>Ordered / ASN / Recv</th>
+          <th>Pending Bal &amp; Var %</th>
+          <th>Leg &amp; ETD / ETA</th>
+          <th>Status Badges</th>
+          <th>AI Risk &amp; Insights</th>
+        </tr>
+      </thead>
+      <tbody>
+            <tr>
+              <td><strong>PO-1001</strong><br/><span class="muted">ASN-01 · LOT-GRN-01</span></td>
+              <td><span class="pill">grain</span><br/>Milling Wheat (10,000 Qtl PO -&gt; Italy Hub)<br/><span class="muted">Supplier: FARM-UA-09</span></td>
+              <td>Ord: 10,000<br/>ASN: 6,000<br/>Recv: 5,910</td>
+              <td>Bal: <strong>4,000</strong><br/>Var: -1.50%</td>
+              <td>Leg 2: OCEAN (Odesa Port → Genoa Hub)<br/><span class="muted">Plan: 2026-11-10 → 2026-11-20</span><br/>Rev: 2026-11-11 → 2026-11-24</td>
+              <td>⏳ Pending PO Bal (4,000) | ⚠️ Qty Variance (-1.50%) | ⚠️ Transshipment / Reroute</td>
+              <td><strong>70 / 100</strong><br/><span class="muted">Loss/shrinkage anomaly (-1.50%); Diversion/reroute check (Vessel swap at Black Sea transshipment); Open PO balance (4,000)</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>PO-1002</strong><br/><span class="muted">ASN-02 · LOT-FIN-02</span></td>
+              <td><span class="pill">sensitive_finished</span><br/>Cold-Chain Biologics / Pharma<br/><span class="muted">Supplier: SUP-IT-44</span></td>
+              <td>Ord: 500<br/>ASN: 500<br/>Recv: 500</td>
+              <td>Bal: <strong>0</strong><br/>Var: +0.00%</td>
+              <td>Leg 1: ROAD (Milan Plant → Rome Hub)<br/><span class="muted">Plan: 2026-11-18 → 2026-11-19</span><br/>Rev: 2026-11-18 → 2026-11-19</td>
+              <td>⚠️ Near Expiry (12d) | 🚨 Above Max (9.2°C)</td>
+              <td><strong>50 / 100</strong><br/><span class="muted">Near-expiry risk (12d left); Condition breach (9.2°C)</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>PO-1003</strong><br/><span class="muted">PENDING-ASN · LOT-MTL-03</span></td>
+              <td><span class="pill">metals</span><br/>Electrolytic Copper Cathodes<br/><span class="muted">Supplier: SUP-MTL-12</span></td>
+              <td>Ord: 2,000<br/>ASN: 0<br/>Recv: 0</td>
+              <td>Bal: <strong>2,000</strong><br/>Var: +0.00%</td>
+              <td>Leg 1: RAIL (Smelter A → Trieste Port)<br/><span class="muted">Plan: 2026-11-22 → 2026-11-25</span><br/>Rev: 2026-11-22 → 2026-11-25</td>
+              <td>⏳ Pending PO Bal (2,000) | ⏳ Awaiting ASN</td>
+              <td><strong>10 / 100</strong><br/><span class="muted">Open PO balance (2,000)</span></td>
+            </tr>
+          
+            <tr>
+              <td><strong>PO-1004</strong><br/><span class="muted">ASN-04 · LOT-OIL-04</span></td>
+              <td><span class="pill">oil</span><br/>Refined Sunflower Oil (Bulk Tank)<br/><span class="muted">Supplier: SUP-OIL-05</span></td>
+              <td>Ord: 1,500<br/>ASN: 1,500<br/>Recv: 1,495</td>
+              <td>Bal: <strong>0</strong><br/>Var: -0.33%</td>
+              <td>Leg 2: BARGE (Constanta Terminal → Naples Hub)<br/><span class="muted">Plan: 2026-11-15 → 2026-11-23</span><br/>Rev: 2026-11-15 → 2026-11-25</td>
+              <td>⚠️ Qty Variance (-0.33%) | ⚠️ Transshipment / Reroute</td>
+              <td><strong>25 / 100</strong><br/><span class="muted">Diversion/reroute check (Barge-to-tanker transfer delay)</span></td>
+            </tr>
+          </tbody>
+    </table>
+  </div>
+</body>
+</html>
